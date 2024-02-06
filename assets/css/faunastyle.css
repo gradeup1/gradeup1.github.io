@@ -1,0 +1,119 @@
+p{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 17px;
+}
+
+#desc{
+  color:rgb(4, 4, 89);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#class{
+  color:crimson;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#repro{
+  color:rgb(13, 13, 175);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#distr{
+  color:rgba(147, 96, 1, 0.814);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#diet{
+  color:rgb(21, 208, 92);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.modal h2{
+    color:rgb(0, 72, 255);
+}
+
+.info{
+    color:rgba(0, 38, 255, 0.69);
+    font-weight: 900;
+
+}
+
+.reptiles .title::after{
+    background: rgb(255, 252, 252);
+    content: "click for full info";
+}
+
+#sci{
+    color:rgb(55, 54, 54);
+    font-style: italic;
+    font-family: sans-serif;
+    font-weight: 700;
+}
+  /* Styles for the image grid */
+  .image-grid {
+    display: grid;
+    grid-template-columns:  repeat(4, 1fr);
+    grid-gap: 9px;
+    margin: 50px;
+
+  }
+  .image-grid img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .image-grid img:hover {
+    opacity: 0.8;
+  }
+  /* Styles for the image modal */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  .modal-content {
+    margin: 5% auto;
+    width: 80%;
+    max-width: 800px;
+    position: relative;
+    animation-name: modalopen;
+    animation-duration: 0.7s;
+  }
+  .modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+  }
+  .modal-img {
+    width: 100%;
+    height: auto;
+  }
+  .modal-info {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  /* Animation for the modal */
+  @keyframes modalopen {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+
+
