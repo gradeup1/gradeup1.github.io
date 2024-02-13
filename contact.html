@@ -108,35 +108,18 @@
                   </div>
                </div>
                <div class="col-md-6">
-                  <form id="request" class="main_form">
-                     <div class="row">
-                        <div class="col-md-6 ">
-                           <input class="contactus" placeholder="Name*" type="type" name=" Name"> 
-                        </div>
-                        <div class="col-md-6">
-                           <input class="contactus" placeholder="Phone Number*" type="type" name="Phone Number">                          
-                        </div>
-                        <div class="col-md-12">
-                           <input class="contactus" placeholder="Email*" type="type" name="Email">                          
-                        </div>
-                        <div class="col-md-12 select-outline">
-                           <select class="custom-select ">
-                              <option selected>Select Subject*</option>
-                              <option value="1">Life Sciences</option>
-                              <option value="2">Physical Sciences</option>
-                              <option value="3">Mathematics</option>
-                              <option value="4">Accounting</option>
-                              <option value="5">Basic Programming</option>
-                           </select>
-                        </div>
-                        <div class="col-md-12">
-                           <textarea class="textarea" placeholder="Message" type="type" Message="Name"></textarea>
-                        </div>
-                        <div class="col-md-12">
-                           <button class="send_btn">Send</button>
-                        </div>
-                     </div>
-                  </form>
+                 <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/{form_id}" method="post">
+                       <fieldset id="fs-frm-inputs">
+                           <label for="full-name">Full Name</label>
+                            <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+                            <label for="email-address">Email Address</label>
+                            <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
+                              <label for="message">Message</label>
+                            <textarea rows="5" name="message" id="message" placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus." required=""></textarea>
+                            <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+                       </fieldset>
+              <input type="submit" value="Submit">
+               </form>
                </div>
                <div class="col-md-6">
                   <div class="map_main">
