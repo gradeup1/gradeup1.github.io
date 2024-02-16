@@ -1026,7 +1026,7 @@ ul.social_icon li a:hover {
 
 
 /** contact **/
-
+/**
 .contact {
      background: #fcfcfc;
      padding-bottom: 90px;
@@ -1107,6 +1107,45 @@ ul.social_icon li a:hover {
      color: #501f14;
      opacity: 1;
 }
-
+**/
 
 /** end contact **/
+/**----------------------------------**/
+/* New Form styling */
+#fs-frm {
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+#fs-frm label {
+    font-weight: bold;
+}
+
+#fs-frm input[type="text"],
+#fs-frm input[type="email"],
+#fs-frm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+#fs-frm textarea {
+    height: 150px;
+}
+
+#fs-frm input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#fs-frm input[type="submit"]:hover {
+    background-color: #0056b3;
+}
