@@ -1149,13 +1149,10 @@ ul.social_icon li a:hover {
 #fs-frm input[type="submit"]:hover {
     background-color: #0056b3;
 }
- <style>
-         .informa {
-            text-align: center;
+.informa {
+     text-align: center;
          }
-         .informa h1 {
-            font-size: 48px;
-            color: #ff0000; /* Red color */
+.informa h1 {
+     font-size: 48px;
+     color: #ff0000; /* Red color */
          }
-      </style>
-
