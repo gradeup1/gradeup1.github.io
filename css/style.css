@@ -3716,7 +3716,26 @@ a.link-style3 {
 .course-meta-bot ul li:hover{
 	color: #eea412;
 }
+ /* Centering the form container */
+  .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
+/* Styling the form container */
+.form-container {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+/* Styling the iframe */
+iframe {
+    border: none;
+}
 
 
 
