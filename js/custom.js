@@ -129,4 +129,16 @@ function getURL() { window.location.href; } var protocol = location.protocol; $.
         });
     });
 
+const correctPassword = "GradeUp1";
+
+function checkPassword() {
+    const passwordInput = document.getElementById("passwordInput").value;
+    const errorMessage = document.getElementById("errorMessage");
+
+    if (passwordInput === correctPassword) {
+        window.location.href = "protected-page.html"; // Redirect to the protected page
+    } else {
+        errorMessage.textContent = "Incorrect password. Please try again.";
+    }
+}
 
