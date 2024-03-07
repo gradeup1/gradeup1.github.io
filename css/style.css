@@ -3284,36 +3284,260 @@ span.m_1 {
 }
 **/
 
- /* Custom styles for the prompt */
-   .prompt-container {
-       background-color: #f9f9f9;
-       border: 1px solid #ccc;
-       border-radius: 5px;
-       padding: 20px;
-       max-width: 400px;
-       margin: 100px auto;
-       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-   }
+  
+  .content-wrapper {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: none;
+  }
+  
+  h4 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #000000;
+    font-family:sans-serif  ;
+    font-size: 67px;
+    font-weight: bold;
+  }
+  h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #000000;
+    font-family:  Arial, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  
+  .categories {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .category {
+    flex: 1;
+  }
+  
+  .year {
+    list-style: none;
+    background-color: #f12e2e;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .year:hover {
+    background-color: #073668;
+  }
+  
+  .papers {
+    margin-top: 30px;
+  }
+  
+  ul {
+    list-style: none;
+    padding-left: 20px;
+  }
+  
+  ul ul {
+    margin-top: 10px;
+  }
+  
+  a {
+    color: #4159dd;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  .years {
+    list-style: none;
+    padding: 1;
+  }
+  
+  .year {
+    margin-bottom: 10px; /* Adjust as needed */
+  }
 
-   .prompt-input {
-       width: 100%;
-       padding: 10px;
-       border: 1px solid #ccc;
-       border-radius: 5px;
-       margin-top: 10px;
-   }
+  .modal {
+    display: none;
+    position:fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0);
+    padding: 15px;
+    overflow-y: hidden;
+    border-radius: 10px;
+    height:auto;
+    
+    
+  }
+  
+  .modal-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    width:40%;
+    margin: 0 auto;
+    overflow-y:auto;
+    
+  }
+  
+  .modal-content h3 {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    color: #000000;
+    
+  }
+  .modal-content:hover{
+    box-shadow: 0 0 20px rgba(252, 46, 46, 0.3);
+  }
+  
+  .modal-content ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .modal-content ul li {
+    margin-bottom: 10px;
+  }
+  
+  .modal-content ul li a {
+    display: block;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #000000;
+    transition: background-color 0.3s ease;
+  }
+  
+  .modal-content ul li a:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .modal-content ul li a::before {
+    content: '\1F4D6'; /* Unicode for a paper icon */
+    margin-right: 10px;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 28px;
+    color: #999999;
+  }
+  
+  .close:hover {
+    color: #000000;
+  }
+  
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
 
-   .prompt-button {
-       background-color: #007bff;
-       color: #fff;
-       border: none;
-       padding: 10px 20px;
-       border-radius: 5px;
-       cursor: pointer;
-       margin-top: 10px;
-   }
+  .modal {
+    /* Your existing modal styles */
+    overflow-y: auto; /* Enable vertical scrolling within the modal */
+    width: 99%;
+  }
+  
+  body.modal-open {
+    overflow:scroll; /* Prevent scrolling on the body when modal is open */
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .modal-content {
+      width: 100%; /* Adjust width as needed for smaller screens */
+    }
 
-   .prompt-button:hover {
-       background-color: #0056b3;
-   }
-
+    .modal {
+        /* Your existing modal styles */
+        overflow-y: auto; /* Enable vertical scrolling within the modal */
+        
+      }
+      
+      body.modal-open {
+        overflow: scroll; /* Prevent scrolling on the body when modal is open */
+      }
+      
+      .modal-content {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      }
+      
+      .modal-content h3 {
+        font-family: 'Arial', sans-serif;
+        font-size: 24px;
+        color: #333333;
+        text-align: center;
+        align-content: center;
+      }
+      
+      .modal-content ul {
+        list-style-type: none;
+        padding: 0;
+      }
+      
+      .modal-content ul li {
+        margin-bottom: 10px;
+      }
+      
+      .modal-content ul li a {
+        display: block;
+        padding: 10px;
+        background-color: #f0f0f0;
+        border-radius: 5px;
+        text-decoration: none;
+        color: #000000;
+        transition: background-color 0.3s ease;
+      }
+      
+      .modal-content ul li a:hover {
+        background-color: #c7c4c4;
+      }
+      
+      .modal-content ul li a::before {
+        content: '\1F4D6'; /* Unicode for a paper icon */
+        margin-right: 10px;
+      }
+      
+      .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        font-size: 30px;
+        color: #504f4f;
+      }
+      
+      .close:hover {
+        color: #333333;
+      }
+      
+      @media only screen and (max-width: 600px) {
+        .modal-content {
+          width: 100%; /* Adjust width as needed for smaller screens */
+          overflow-y: auto;
+        }
+      }
+      
+  }
+  
